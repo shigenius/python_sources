@@ -1,4 +1,5 @@
 # python_sources
+python以外のコードもある
 
 ### opencv_tracking.py
 
@@ -30,3 +31,7 @@ GPSロガーを起動し，記録開始してから動画を撮影する．
 % sh convert_to_images.sh
 % python jsontest.py <latest_jsonfile_dir>
 ~~~
+
+* 補足
+  * convert_to_images.sh では1秒に2フレーム毎にサンプリングしていますが，ここを変更する場合は，4行目を変更し，同時にjsontest.pyの35行目 phototimeもいい感じに定義してください．
+  * 磁北の向きはカメラの向きと90°ズレています．
