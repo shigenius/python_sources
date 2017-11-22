@@ -6,7 +6,7 @@
 dependence : ffmpeg
 * 動画を画像に変換する
 
-### python associateGPSLogwithImages.py
+### associateGPSLogwithImages.py
 
 * GPSロガーから吐いたGPSのログが記述してあるjsonファイルと，convert_to_images.shで出力した系列画像郡を対応付けて，GT.txtとして出力する．
 * 用いたGPSロガー : ZweiteGPS https://itunes.apple.com/jp/app/zweitegps-gpsロガー-ビューア/id635080232?mt=8
