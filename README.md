@@ -1,5 +1,5 @@
 # python_sources
-python以外のコードもある
+研究で使ったやつとか
 
 ### opencv_tracking.py
 
