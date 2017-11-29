@@ -75,7 +75,7 @@ class Motion:
         proc_count = 0 # ループの回数
         frame_count = 1 # jpgのindex 4桁
         while end_flag:
-            skipflag = False if (proc_count % self.skipframe == 1) else True
+            skipflag = False if (proc_count % (self.skipframe+1) == 1) else True
             print(frame_count, proc_count, skipflag)
 
             # グレースケールに変換
