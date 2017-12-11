@@ -9,6 +9,7 @@
 ~~~
 
 * 実行後，最初のフレームでマウスクリックしたところに一番近い特徴点をトラッキングする．(Rキーでrun，Sキーでstop，spaceキーで1f進む)
+* 30fpsの動画のみ対応.
 
 ### camera_pos_regression/
 環境 : python3.5 ffmpeg3.2.2
