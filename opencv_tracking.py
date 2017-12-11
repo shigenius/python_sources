@@ -162,8 +162,9 @@ class Motion:
             self.addFeature(x, y)
             return
 
+
         # 探索半径（pixel）
-        radius = 5
+        radius = 200
         # 既存の特徴点が近傍にあるか探索
         index = self.getFeatureIndex(x, y, radius)
 
