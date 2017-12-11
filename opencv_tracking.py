@@ -255,9 +255,9 @@ if __name__ == '__main__':
     parser.add_argument('output', help='Path to output directory')
     parser.add_argument('--skipframe', '-s', type=int, default=0,
                         help='skip frame rate (default = 5)')
-    parser.add_argument('-x', default=256,
+    parser.add_argument('-x', type=int, default=256,
                         help='rectangle x size (default = 256)')
-    parser.add_argument('-y', default=256,
+    parser.add_argument('-y', type=int, default=256,
                         help='rectangle y size (default = 256)')
 
     args = parser.parse_args()
