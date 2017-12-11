@@ -111,7 +111,7 @@ class Motion:
                             rectangle = self.bg[self.rectsize_y+rect_y:self.rectsize_y*2+rect_y, self.rectsize_x+rect_x:self.rectsize_x*2+rect_x] #
                         else:
                             rectangle = self.frame[rect_y:rect_y+self.rectsize_y, rect_x:rect_x+self.rectsize_x] # そのまま矩形を抜き出す
-                        cv2.imwrite(self.output + "image_" + '%04d' % frame_count + ".jpg", rectangle)
+                        cv2.imwrite(self.output + "/image_" + '%04d' % frame_count + ".jpg", rectangle)
                         writer.writerow((frame_count, feature[0][0], feature[0][1], self.rectsize_x, self.rectsize_y))
                         cv2.circle(self.frame, (feature[0][0], feature[0][1]), 4, (15, 241, 255), -1, 8, 0)
                         # 追加
