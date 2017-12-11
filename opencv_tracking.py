@@ -107,7 +107,8 @@ class Motion:
                         # 矩形が画像からはみ出ても矩形のサイズが固定であることを保障する．
                         if (rect_x < 0 or rect_y < 0 or (rect_x+self.rectsize_x) > self.screen_width or (rect_y+self.rectsize_y) > self.screen_height): # 矩形がscreenからはみ出ている場合
                             print("枠からでたよ") #paddingする処理をかく # 元のフレームをzerosで拡張してそのフレームから矩形を抜き出す
-                            self.bg[self.rectsize_y:self.rectsize_y+self.screen_height, self.rectsize_x:self.rectsize_x+self.screen_width] = self.frame # 余白をつける
+                            self.bg = np.zeros((int(self.screen_height+(self.rectsize_y*2)), int(self.screen_width+(self.rectsize_x*2)), 3)) #矩形がはみ出た時用のback ground
+                            self.bg[int(self.rectsize_y):int(self.rectsize_y+self.screen_height), int(self.rectsize_x):int(self.rectsize_x+self.screen_width)] = self.frame # 余白をつける
                             rectangle = self.bg[self.rectsize_y+rect_y:self.rectsize_y*2+rect_y, self.rectsize_x+rect_x:self.rectsize_x*2+rect_x] #
                         else:
                             rectangle = self.frame[rect_y:rect_y+self.rectsize_y, rect_x:rect_x+self.rectsize_x] # そのまま矩形を抜き出す
@@ -253,7 +254,7 @@ if __name__ == '__main__':
     description='feature point tranking')
     parser.add_argument('target', help='Path to video')
     parser.add_argument('output', help='Path to output directory')
-    parser.add_argument('--skipframe', '-s', type=int, default=0,
+    parser.add_argument('--skipframe', '-s', type=int, default=5,
                         help='skip frame rate (default = 5)')
     parser.add_argument('-x', type=int, default=256,
                         help='rectangle x size (default = 256)')
