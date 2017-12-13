@@ -12,6 +12,7 @@
 * 30fpsの動画のみ対応. 他はガバ
 
 ### convert_to_image_each_labels.sh
+* 動画を画像に変換する(ffmpegが必要)
 * [makeDataset_forSpecificObjRecog.py](https://github.com/shigenius/tensorflow_works/blob/master/README.md#makedataset_forspecificobjrecogpy) のディレクトリ構造を作成する．
 * 使う前のディレクトリ構造
 
