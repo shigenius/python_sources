@@ -9,8 +9,25 @@
 ~~~
 
 * 実行後，最初のフレームでマウスクリックしたところに一番近い特徴点をトラッキングする．(Rキーでrun，Sキーでstop，spaceキーで1f進む)
-* 30fpsの動画のみ対応.
+* 30fpsの動画のみ対応. 他はガバ
 
+### convert_to_image_each_labels.sh
+* [makeDataset_forSpecificObjRecog.py](https://github.com/shigenius/tensorflow_works/blob/master/README.md#makedataset_forspecificobjrecogpy) のディレクトリ構造を作成する．
+* 使う前のディレクトリ構造
+~~
+dataset/
+ + class1/
+    + class1_video1.mp4
+    + class1_video2.mov
+ + class2/
+    + class2_video1.mp4
+    + class2_video2.mov
+~~~
+* 使い方
+~~~
+% sh convert_to_image_each_labels.sh
+~~~
+* そのあと`opencv_tracking.py`を適用する．
 ### camera_pos_regression/
 環境 : python3.5 ffmpeg3.2.2
 
