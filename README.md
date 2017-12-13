@@ -14,7 +14,7 @@
 ### convert_to_image_each_labels.sh
 * [makeDataset_forSpecificObjRecog.py](https://github.com/shigenius/tensorflow_works/blob/master/README.md#makedataset_forspecificobjrecogpy) のディレクトリ構造を作成する．
 * 使う前のディレクトリ構造
-~~
+~~~
 dataset/
  + class1/
     + class1_video1.mp4
